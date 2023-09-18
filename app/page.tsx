@@ -26,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <section className="container mx-auto mt-4 shadow-md p-2">
+    <section className="container mx-auto mt-4 p-2">
       <TodoInput todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <div className="flex flex-col md:flex-row gap-2 mt-5">
         <div className="w-full flex flex-col items-center">
