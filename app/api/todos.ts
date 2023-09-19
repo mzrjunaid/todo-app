@@ -1,6 +1,6 @@
 import { Todo } from "@/models/Todo";
 
-const baseUrl = "http://localhost:3001";
+const baseUrl = "http://localhost:3000";
 
 export const getAllTodos = async (): Promise<Todo[]> => {
   const res = await fetch(`${baseUrl}/todos`, {
