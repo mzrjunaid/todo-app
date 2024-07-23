@@ -1,6 +1,6 @@
 import { Todo } from "@/models/Todo";
 
-const baseUrl = "https://mzrjunaid.github.io/todo-app";
+const baseUrl = "https://mzrjunaid.github.io/todo-app/data/todos.json";
 
 interface ApiResponse {
   message: string;
@@ -8,7 +8,7 @@ interface ApiResponse {
 }
 
 export const getAllTodos = async (): Promise<ApiResponse> => {
-  const res = await fetch(`${baseUrl}/api/todos`, {
+  const res = await fetch(`${baseUrl}`, {
     cache: "no-store",
   });
   const todos = await res.json();
@@ -16,7 +16,7 @@ export const getAllTodos = async (): Promise<ApiResponse> => {
 };
 
 export const addTodo = async (todo: Todo): Promise<Todo> => {
-  const res = await fetch(`${baseUrl}/api/todos`, {
+  const res = await fetch(`${baseUrl}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const addTodo = async (todo: Todo): Promise<Todo> => {
 };
 
 export const deleteTodo = async (id: string): Promise<void> => {
-  const res = await fetch(`${baseUrl}/api/todos/${id}`, {
+  const res = await fetch(`${baseUrl}/${id}`, {
     method: "DELETE",
   });
 };

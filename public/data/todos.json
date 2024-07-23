@@ -9,6 +9,11 @@
       "id": "2",
       "todo": "Go to the gym",
       "isDone": false
+    },
+    {
+      "id": "3",
+      "todo": "Working Night Shift",
+      "isDone": true
     }
   ]
 }
