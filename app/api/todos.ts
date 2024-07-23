@@ -1,6 +1,6 @@
 import { Todo } from "@/models/Todo";
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://mzrjunaid.github.io/todo-app";
 
 interface ApiResponse {
   message: string;
